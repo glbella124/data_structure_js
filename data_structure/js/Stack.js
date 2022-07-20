@@ -25,6 +25,7 @@ class Stack {
     // 返回栈顶的元素，不修改栈
 
     peak(){
+        if(this.isEmpty()) return null
         return this.array[this.array.length-1]
     }
 
