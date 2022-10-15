@@ -319,8 +319,62 @@ console.log(myObject.name);
 myObject.reading()
 
 // 3. 利用构造函数创建对象称为对象的实例化
+```
 
-new 执行过程
+##### new 关键字执行过程
 
+1. new 构造函数可以在内存中创建一个空对象
+
+2. this都会指向这个对象
+
+3. 指向构造函数里面的代码，给这个空对象添加属性和方法
+
+4. 返回这个新对象 (不需要return)
+
+#### 遍历对象属性
+
+for...in用于对数组或者对象的属性进行循环操作
+
+### 12. 内置对象
+
+JavaScript对象：
+
+JS 基础: 自定义对象，内置对象(自带的)，
+
+JS API: 浏览器对象
+
+https://developer.mozilla.org/zh-CN/
+
+#### 随机数
+
+```js
+// 得到一个两数之间的随机整数，包括两个数在内
+
+function getRandom(min, max) {
+
+ return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+console.log(getRandom(10, 100));
+```
+
+#### 日期对象
+
+核心算法
+
+```js
+ // 核心算法
+ // 时间戳 -- 用户输入的时间总的毫秒数减去现在的时间的总毫秒数，就是剩余时间毫秒数，不能用时分秒相减
+ // 把剩余时间总的毫秒数转换为天，时，分，秒(时间戳转换为时分秒)
+```
+
+```js
+转换公式
+//天数，小时，分钟，秒数
+d = parseInt(总秒数/60/60/24)
+h = parseInt(总秒数/60/60%24)
+m = parseInt(总秒数/60%60)
+s = parseInt(总秒数%60)
 ```
 

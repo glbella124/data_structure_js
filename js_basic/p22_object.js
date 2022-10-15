@@ -75,3 +75,16 @@ console.log(starObject['sex']);
 console.log(myObject.name);
 myObject.reading()
 
+// new 关键字执行过程
+// 1. new 构造函数可以在内存中创建一个空对象
+// 2.this都会指向这个对象
+// 3.指向构造函数里面的代码，给这个空对象添加属性和方法
+// 4.返回这个对象 (不需要return)
+
+// 遍历 -- k 或者 key
+for(let k in starObject){
+    // 属性名
+    console.log(k);
+    // 属性值
+    console.log(starObject[i]);
+}

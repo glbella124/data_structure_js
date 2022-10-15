@@ -23,4 +23,22 @@ let arr3 = []
 for(let i=arr1.length-1;i>=0;i--){
     arr3[arr3.length]=arr1[i]
 }
-console.log(arr3);
+// console.log(arr3);
+
+// 核心算法
+// 目标：把旧数组里不重复的元素选取出来放到新数组中，重复的元素只保留一个，放到新数组中去重
+// 核心算法：我们遍历旧数组，然后拿着旧数组元素去查询新数组，没有则添加，存在不添加
+// indexOf -- -1不存在新元素
+let arr4 = [4,9,4,6,7,3,4,22,4,7]
+
+// 封装一个去重的数组
+function unique(arr){
+    let newArr = []
+    for(let i = 0; i<arr.length;i++){
+        if(newArr.indexOf(arr[i]) === -1){
+            newArr.push(arr[i])  
+        }
+    }
+    return newArr
+}
+console.log(unique(arr4));

@@ -23,12 +23,29 @@
 // }
 // console.log(newArr);
 
-let oldArr = [19,49,27,67,10,8,86]
-let newArr = []
-for(let i=0;i<oldArr.length;i++){
-    if(oldArr[i]>30){
-        newArr[newArr.length]=oldArr[i]
-    }
-}
-console.log(newArr);
+// let oldArr = [19,49,27,67,10,8,86]
+// let newArr = []
+// for(let i=0;i<oldArr.length;i++){
+//     if(oldArr[i]>30){
+//         newArr[newArr.length]=oldArr[i]
+//     }
+// }
+// console.log(newArr);
 
+// push -- 数组结尾添加，返回原数组的长度
+let myArr = [1,2,3]
+console.log(myArr.push(5,'pink'));
+console.log(myArr);
+
+// unshift 数组开头
+let myArr1 = [4,6,0,2]
+console.log(myArr1.unshift(9,8,'abc'));
+console.log(myArr1);
+
+// 删除数组元素
+// pop 删除数组最后一个元素，一次只能删除一个元素
+// 返回删除的元素
+console.log(myArr1.pop(),"pop");
+
+// shift 删除数组第一个元素，一次只能删除一个元素
+console.log(myArr1.shift());
