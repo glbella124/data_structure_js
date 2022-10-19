@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this指向问题</title>
+  </head>
+  <body>
+    <button>点击</button>
+    <script>
+      // this指向问题，一般情况下this的最终指向是那个调用它的对象
+
+      // 1. 全局作用域，或者普通函数中的this指向全局对象window(注意定时器里面的this指向window)
+      console.log(this, "默认输出");
+
+      function fn() {
+        console.log(this, "函数内的");
+      }
+      fn();
+
+      window.fn();
+
+      window.setTimeout(() => {
+        console.log(this, "定时器");
+      });
+
+      // 2. 方法调用中的谁调用this指向谁
+      let myFunc = {
+        readBooks: function () {
+          // 指向myFunc这个对象
+          console.log(this, "readBooks");
+        },
+      };
+      myFunc.readBooks();
+
+      let btn = document.querySelector("button");
+
+      //   指向btn这个按钮对象
+      //   btn.onclick = function(){
+      //     console.log(this,"button按钮");
+      //   }
+      btn.addEventListener("click", function () {
+        console.log(this);
+      });
+      //   btn.addEventListener("click", () => {
+      //     // 指向window
+      //     console.log(this,"箭头函数");
+      //   });
+
+      //3.构造函数中this指向构造函数的实例
+      function Fun(){
+        // this指向Fun实例对象
+        console.log(this,"构造函数Fun");
+      }
+      let fun = new Fun()
+    </script>
+  </body>
+</html>

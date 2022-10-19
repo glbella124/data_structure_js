@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+</head>
+<body>
+    <button>清除定时器</button>
+    <script>
+        let btn = document.querySelector('button')
+        // window.setTimeout(调用函数，延时时间)
+        // 延时单位是毫秒，但可以省略，省略默认是0
+        function callback(){
+            console.log('爆炸了');
+        }
+        let timer = setTimeout(callback,3000)
+        // setTimeout()这个调用函数称为回调函数
+        // 回调函数 -- 需要等待时间，时间到了才去调用
+        // element.onclick = function() -- 点击后才去调用
+        // element.addEventListener("click",fn) 
+
+        // window.clearTimeout(timeoutID)停止定时器
+        // 取消了先前通过调用setTimeout()建立的定时器
+        btn.addEventListener('click',function(){
+            clearTimeout(timer)
+        })
+
+    </script>
+      
+</body>
+</html>
