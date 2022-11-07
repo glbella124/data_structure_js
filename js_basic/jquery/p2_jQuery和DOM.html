@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <span></span>
+    <script>
+      // 用原生js获取来的对象就是DOM对象
+      // jQuery方法获取的元素就是jQuery对象
+
+      // console.dir() 方法
+      // 用来对一个对象进行检查(inspect)，并以易于阅读和打印的格式显示。
+      // 该方法对于输入 DOM 对象非常有用，因为 dir 方法会显示DOM对象的所有属性
+      // jQuery对象本质：利用$对DOM对象包装后产生的对象(伪数组形式存储)
+      $("div");
+      console.dir($("div"));
+    </script>
+  </body>
+</html>

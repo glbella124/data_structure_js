@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery和DOM相互转换</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <video src="./粒子特效 - 银河星系.mp4" muted></video>
+    <script>
+        // 1. DOM对象转换为jQuery对象 -- 直接获取视频
+        $('video')
+        // 2. 使用原生js获取DOM对象
+        // let myVideo = document.querySelector('video')
+        // jquery里面没有play这个方法
+        // myVideo.play()
+        // $('video')[0].play()
+        $('video').get(0).play()
+    </script>
+  </body>
+</html>

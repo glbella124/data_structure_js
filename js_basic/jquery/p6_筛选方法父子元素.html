@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>筛选方法</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div class="grandpa">
+      <div class="father">
+        <div class="son">son</div>
+      </div>
+      <div class="father">
+        <div class="son">son1</div>
+      </div>
+    </div>
+    <div class="mother">
+      <p>This is a new article</p>
+    </div>
+
+    <script>
+        // 查找元素
+        // $(function(){
+        //     // parent返回最近一级的父级元素
+        //     console.log($('.son').parent());
+        //     $('.mother').children('p').css('color','pink')
+        //     // 选里面所有的孩子，包括儿子和孙子 find() -- 后代选择器
+        //     $('.grandpa').find('div').css('background',"lightblue")
+
+        // })
+
+        // 查找元素
+        $(function(){
+          $('.mother').children('p').css('color','pink')
+          // 后代选择器
+          $('.grandpa').find('div').css('background','lightblue')
+        })
+    </script>
+  </body>
+</html>

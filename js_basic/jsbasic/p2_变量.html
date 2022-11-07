@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 -- 变量</title>
+  </head>
+  <body>
+    <script>
+      // //  1 ---  变量案例弹出用户名
+      // // 用户输入姓名
+      // var myname = prompt("请输入名字")
+      // // 输出用户名
+      // alert(myname)
+
+      // 2 -- 变量的语法扩展
+      // 只声明不赋值,结果undefined
+      // 不声明不赋值，直接使用变量会报错
+      // 不声明只赋值可以使用
+      // 声明多个变量
+      var age = 18,
+        name = "Bella",
+        comment = "pretty";
+      console.log(age, name, comment);
+
+      // 3 -- 变量命名规范
+      // 严格区分大小写
+      // 不能以数字开头 -- 以字母，下划线，美元符号开头
+      // 不能以关键字开头
+      //   驼峰命名法
+
+      //   4 -- 交换变量
+      var apple1 = "青苹果";
+      var apple2 = "红苹果";
+      var temp;
+      temp = apple1;
+      apple1 = apple2;
+      apple2 = temp;
+      console.log(apple1, apple2);
+
+      //   小结
+      //   声明变量本质是去内存申请空间
+      //   变量初始化 -- 声明变量并赋值
+    </script>
+  </body>
+</html>

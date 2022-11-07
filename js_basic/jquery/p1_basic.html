@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <style>
+      div {
+        width: 200px;
+        height: 300px;
+        background: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // $('div').hide()
+      // 1. 等着页面DOM加载完毕后再去执行js代码
+      // $(document).ready(function(){
+      //     $('div').hide()
+      // })
+      // 2.等着页面DOM元素加载完毕后再去执行js代码
+      $(function () {
+        // 页面dom加载完成的入口
+        $("div").hide();
+      });
+
+      jQuery(function () {
+        alert(1);
+      });
+      // 1.等着DOM结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery帮我们完成了封装
+      // 2.相当于原生js中的DOMContentLoaded
+      // 3.不同于原生js中的load事件是等页面文档，外部的js文件、css文件、图片加载完毕后才执行内部代码
+      // $是jQuery的顶级对象，在代码中可以使用jQuery代替$
+      // 相当于j原生js中的window.把元素利用$包装成jQuery对象
+    </script>
+  </body>
+</html>

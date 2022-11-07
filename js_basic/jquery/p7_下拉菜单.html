@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>下拉菜单</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        /* position: relative; */
+        display: flex;
+        border: 1px solid black;
+      }
+
+      .nav {
+        width: 50%;
+        height: 40px;
+        /* position: absolute; */
+        background: paleturquoise;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      /* 主菜单 */
+      .nav > li {
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        background: rgba(255, 77, 0, 0.893);
+        position: relative;
+      }
+      .nav li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: black;
+        line-height: 35px;
+      }
+
+      .nav > li > a:hover {
+        background: rgba(240, 209, 75, 0.966);
+      }
+
+      /* 下拉框 */
+      .nav ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        border-left: 1px solid #fecc5b;
+        border-right: 1px solid #fecc5b;
+      }
+
+      .nav ul li {
+        border-bottom: 1px solid #FECC5B;
+      }
+
+      .nav ul li{
+        background: #FFF5DA;
+      }
+
+
+    </style>
+    <script src="./jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav">
+        <li>
+          <a href="#">微博</a>
+          <ul>
+            <li>
+              <a href="">私信</a>
+            </li>
+            <li>
+              <a href="">评论</a>
+            </li>
+            <li>
+              <a href="">@我</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">微博</a>
+          <ul>
+            <li>
+              <a href="">私信</a>
+            </li>
+            <li>
+              <a href="">评论</a>
+            </li>
+            <li>
+              <a href="">@我</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">微博</a>
+          <ul>
+            <li>
+              <a href="">私信</a>
+            </li>
+            <li>
+              <a href="">评论</a>
+            </li>
+            <li>
+              <a href="">@我</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      $(function () {
+        // 子代选择器 -- 只选亲儿子
+        // 鼠标经过
+        $(".nav>li").mouseover(function () {
+          // $(this) jQuery 当前元素 this不要加引号
+          // show() 显示元素  hide 隐藏元素
+          $(this).children("ul").show();
+        });
+
+        // 鼠标离开
+        $(".nav>li").mouseout(function(){
+            $(this).children("ul").hide()
+        })
+
+      });
+    </script>
+  </body>
+</html>

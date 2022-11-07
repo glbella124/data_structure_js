@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作css</title>
+    <style>
+        /* div{
+            width: 300px;
+            height: 500px;
+            background: lightblue;
+        } */
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        // 参数是属性名，属性值，逗号分隔
+        // 参数可以是对象形式。属性不要加引号
+        $(function(){
+            $('div').css({
+                width:300,
+                height:400,
+                backgroundColor:'lightblue'
+                // 复合属性必须采取驼峰命名法
+            })
+        })
+    </script>
+</body>
+</html>

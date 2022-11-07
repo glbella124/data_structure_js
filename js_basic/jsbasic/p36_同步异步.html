@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同步异步</title>
+</head>
+<body>
+    <script>
+        // 执行顺序
+        console.log(1);
+        document.onclick = function(){
+            console.log('click');
+        }
+        console.log(2);
+        setTimeout(function(){
+            console.log(3);
+        },3000)
+
+        // 同步任务 -- console.log(1);console.log(2);
+        // 异步任务 -- 点击后添加 document.onclick 
+        // 主线程不断地重复获得任务，执行任务，在获取任务，再执行那个，这种机制被称为事件循环(event loop)
+    </script>
+</body>
+</html>
