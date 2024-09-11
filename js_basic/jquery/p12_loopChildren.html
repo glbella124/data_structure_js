@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loop - children</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <style>
+      .center-table-item-normal {
+        width: 200px;
+        height: 50px;
+        border: 1px solid black;
+        margin-top: 10px;
+        display: flex;
+      }
+      .center-table-item-normal .left {
+        width: 50%;
+        height: 100%;
+        background: red;
+      }
+      .center-table-item-normal .right {
+        width: 50%;
+        height: 100%;
+        background: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-table-item-normal">
+      <div class="left">版本</div>
+      <div class="right">2017年部</div>
+    </div>
+    <div class="center-table-item-normal">
+      <div class="left">面积</div>
+      <div class="right">888.4567</div>
+    </div>
+    <div class="center-table-item-normal">
+      <div class="left">3</div>
+      <div class="right"></div>
+    </div>
+    <div class="center-table-item-normal">
+      <div class="left">4</div>
+      <div class="right"></div>
+    </div>
+    <script>
+      let obj = {
+        版本: "2017年部",
+        面积: "888.4567",
+        性质: "林地 硬化地表",
+        异常: "疑似基本农田被侵占",
+      };
+
+      $(() => {
+        $(".center-table-item-normal .left").each((index, domEle) => {
+          $(".center-table-item-normal .left")
+            .eq(index)
+            .text(Object.keys(obj)[index]);
+          $(".center-table-item-normal .right")
+            .eq(index)
+            .text(Object.values(obj)[index]);
+        });
+      });
+    </script>
+  </body>
+</html>

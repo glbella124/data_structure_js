@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>properties</title>
+  </head>
+  <body>
+    <div></div>
+    <script src="./simplified_pdgeojson.js"></script>
+    <script src="../jquery/jquery-1.9.0.js"></script>
+    <script src="./turf.min.js"></script>
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+    <script>
+      let res = {
+        code: 200,
+        message: "成功",
+        content: [
+          {
+            index: 5000000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673406589535,
+            authorName: "super_user",
+            name: "浦东新区",
+            categoryAlias: "浦东新区行政区划",
+            id: 65,
+          },
+          {
+            index: 5004000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "潍坊新村街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 66,
+          },
+          {
+            index: 5005000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "陆家嘴街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 67,
+          },
+          {
+            index: 5007000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "周家渡街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 68,
+          },
+          {
+            index: 5008000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "塘桥街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 69,
+          },
+          {
+            index: 5009000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "上钢新村街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 70,
+          },
+          {
+            index: 5103000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "川沙新镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 7,
+          },
+          {
+            index: 5010000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "南码头路街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 71,
+          },
+          {
+            index: 5104000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "高桥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 8,
+          },
+          {
+            index: 5011000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "沪东新村街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 72,
+          },
+          {
+            index: 5105000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "北蔡镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 9,
+          },
+          {
+            index: 5012000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "金杨新村街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 73,
+          },
+          {
+            index: 5110000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "合庆镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 10,
+          },
+          {
+            index: 5013000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "洋泾街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 74,
+          },
+          {
+            index: 5114000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "唐镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 11,
+          },
+          {
+            index: 5014000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "浦兴路街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 75,
+          },
+          {
+            index: 5117000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "曹路镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 12,
+          },
+          {
+            index: 5015000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "东明路街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 76,
+          },
+          {
+            index: 5120000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "金桥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 13,
+          },
+          {
+            index: 5016000,
+            updateTime: 1673418795775,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1673418795775,
+            authorName: "super_user",
+            name: "花木街道",
+            categoryAlias: "浦东新区行政区划",
+            id: 77,
+          },
+          {
+            index: 5121000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "高行镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 14,
+          },
+          {
+            index: 5123000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "高东镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 15,
+          },
+          {
+            index: 5125000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "张江镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 16,
+          },
+          {
+            index: 5130000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "三林镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 17,
+          },
+          {
+            index: 5131000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "惠南镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 18,
+          },
+          {
+            index: 5132000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "周浦镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 19,
+          },
+          {
+            index: 5133000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "新场镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 20,
+          },
+          {
+            index: 5134000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "大团镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 21,
+          },
+          {
+            index: 5136000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "康桥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 22,
+          },
+          {
+            index: 5137000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "航头镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 23,
+          },
+          {
+            index: 5139000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "祝桥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 24,
+          },
+          {
+            index: 5140000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "泥城镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 25,
+          },
+          {
+            index: 5141000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "宣桥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 26,
+          },
+          {
+            index: 5142000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "书院镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 27,
+          },
+          {
+            index: 5143000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "万祥镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 28,
+          },
+          {
+            index: 5144000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "老港镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 29,
+          },
+          {
+            index: 5145000,
+            updateTime: 1673418795796,
+            authorId: 1,
+            type: 0,
+            categoryName: "浦东新区行政区划",
+            parentId: -1,
+            createTime: 1672215386736,
+            authorName: "super_user",
+            name: "南汇新城镇",
+            categoryAlias: "浦东新区行政区划",
+            id: 30,
+          },
+        ],
+      };
+
+      let townMap = new Map();
+      res.content.forEach((v) => {
+        townMap.set(v.name, v.index);
+      });
+      shp("http://127.0.0.1:5501/turf/dz").then((geojson) => {
+        // 街镇区域数据
+        let pdData = pd.features;
+        let polygonData = geojson.features;
+        let _sumSuccess = 0;
+        for (let i = 0; i < polygonData.length; i++) {
+          // 先获取面积
+          let area = 0;
+          //   设置字段
+          let targetProperties = {
+            面积: "",
+            镇域名称: "",
+            xzqh: "",
+            图层构成: "",
+            性质: "",
+          };
+          let coordinates = "";
+          let testPolygon = "";
+          let outer = "";
+          let outerPolygon = "";
+          let inner = "";
+          let innerPolygon = "";
+          let type = polygonData[i].geometry.type;
+          if (type === "Polygon") {
+            coordinates = polygonData[i].geometry.coordinates;
+            testPolygon = turf.polygon(coordinates);
+            area = turf.area(testPolygon);
+          } else {
+            outer = polygonData[i].geometry.coordinates[0];
+            outerPolygon = turf.polygon(outer);
+            inner = polygonData[i].geometry.coordinates[1];
+            innerPolygon = turf.polygon(inner);
+            area = Math.abs(turf.area(outerPolygon) - turf.area(innerPolygon));
+          }
+          for (let j = 0; j < pdData.length; j++) {
+            let pdPolygonCoord = pdData[j].geometry.coordinates;
+            let pdPolygon = turf.polygon(pdPolygonCoord);
+
+            if (type === "Polygon") {
+              if (
+                testPolygon != "" &&
+                pdPolygon != "" &&
+                turf.intersect(testPolygon, pdPolygon)
+              ) {
+                targetProperties.面积 = area;
+                targetProperties.性质 = "基本农田被侵占";
+                targetProperties.图层构成 = "基本农田和2020年森林";
+                targetProperties.镇域名称 = pdData[j].properties.NAME;
+                targetProperties.xzqh = townMap.get(pdData[j].properties.NAME);
+                polygonData[i].properties = targetProperties;
+                break;
+              }
+            } else {
+              if (
+                outerPolygon != "" &&
+                innerPolygon != "" &&
+                (turf.intersect(pdPolygon, outerPolygon) ||
+                  turf.intersect(pdPolygon, innerPolygon))
+              ) {
+                targetProperties.面积 = area;
+                targetProperties.性质 = "基本农田被侵占";
+                targetProperties.图层构成 = "基本农田和2020年森林";
+                targetProperties.镇域名称 = pdData[j].properties.NAME;
+                targetProperties.xzqh = townMap.get(pdData[j].properties.NAME);
+                polygonData[i].properties = targetProperties;
+                break;
+              }
+            }
+          }
+          if (polygonData[i].properties && polygonData[i].properties.xzqh) {
+            _sumSuccess++;
+            console.log("polygonData[i].properties.xzqh", polygonData[i].properties.xzqh);
+          }
+        }
+        console.log(
+          "成功解析：" +
+            _sumSuccess +
+            ",失败：" +
+            (polygonData.length - _sumSuccess)
+        );
+      });
+      // shp数据
+    </script>
+  </body>
+</html>

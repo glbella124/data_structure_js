@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <script src="../jquery/jquery-1.9.0.js"></script>
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+  </head>
+  <body>
+    <script>
+      shp("http://127.0.0.1:5501/turf/dz").then((geojson) => {
+        let polygonData = geojson.features[11].geometry.coordinates[0];
+        console.log(polygonData);
+        let targetData = polygonData.map((v, i) => {
+          //   console.log(v);
+          return v.map((e, item) => {
+            // console.log(e, i);
+            return [e[1], e[0]];
+          });
+        });
+        console.log(targetData);
+      });
+    </script>
+  </body>
+</html>
