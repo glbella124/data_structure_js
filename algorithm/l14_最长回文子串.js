@@ -40,3 +40,6 @@ function longestPalinedrome(s) {
   }
   return s.substring(start, end + 1);
 }
+
+// 时间复杂度：O(n^2)， 每个字符可能会成为回文的中心，扩展的操作是线性的。
+// 空间复杂度: O(1): 只使用了常数级别的额外空间。
